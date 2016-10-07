@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramSSIS", "ProgramSSIS\ProgramSSIS.csproj", "{CD2006D0-A57E-49AD-96A9-E593F011995A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSISComponentWrap", "SSISComponentWrap\SSISComponentWrap.csproj", "{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AllPackages|Any CPU = AllPackages|Any CPU
+		AllPackages|x86 = AllPackages|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD2006D0-A57E-49AD-96A9-E593F011995A}.AllPackages|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2006D0-A57E-49AD-96A9-E593F011995A}.AllPackages|Any CPU.Build.0 = Release|Any CPU
+		{CD2006D0-A57E-49AD-96A9-E593F011995A}.AllPackages|x86.ActiveCfg = Release|Any CPU
+		{CD2006D0-A57E-49AD-96A9-E593F011995A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2006D0-A57E-49AD-96A9-E593F011995A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2006D0-A57E-49AD-96A9-E593F011995A}.Debug|x86.ActiveCfg = Debug|x86
+		{CD2006D0-A57E-49AD-96A9-E593F011995A}.Debug|x86.Build.0 = Debug|x86
+		{CD2006D0-A57E-49AD-96A9-E593F011995A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2006D0-A57E-49AD-96A9-E593F011995A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2006D0-A57E-49AD-96A9-E593F011995A}.Release|x86.ActiveCfg = Release|Any CPU
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.AllPackages|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.AllPackages|Any CPU.Build.0 = Release|Any CPU
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.AllPackages|x86.ActiveCfg = Release|x86
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.AllPackages|x86.Build.0 = Release|x86
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.Debug|x86.ActiveCfg = Debug|x86
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.Debug|x86.Build.0 = Debug|x86
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.Release|x86.ActiveCfg = Release|x86
+		{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

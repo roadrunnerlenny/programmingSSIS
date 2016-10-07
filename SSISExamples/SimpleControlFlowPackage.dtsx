@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/16/2016 10:35:15 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="BLN-ANLE1DSKW7"
+  DTS:CreatorName="DE\anle"
+  DTS:Description="SimpleControlFlowPackage"
+  DTS:DTSID="{30A664AC-33C3-4D75-A709-F82E87C90D47}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.3436.0"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="SimpleControlFlowPackage"
+  DTS:VersionGUID="{1C45CB4B-E3AC-4A63-82FE-1C2CEC243E9D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ConnMan]"
+      DTS:CreationName="OLEDB"
+      DTS:Description="ConnMan"
+      DTS:DTSID="{A5D46607-B187-4B22-A4E0-5FF755959615}"
+      DTS:ObjectName="ConnMan">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Setup;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{723B1635-D237-4D96-9229-C792D108CBED}"
+      DTS:ObjectName="ExamplePar1">
+      <DTS:Property
+        DTS:DataType="0"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{9E246FF3-8255-4CFB-9CC3-C198BA2302F1}"
+      DTS:ObjectName="ExamplePar2">
+      <DTS:Property
+        DTS:DataType="0"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{00984EB4-AD1E-41AC-92FB-5328C4638862}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExampleVar1">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EF3DBA6A-98A5-4D77-9EF6-4D05EA8F0A1A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExampleVar2">
+      <DTS:VariableValue
+        DTS:DataType="3">42</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Example for a sequence"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Example for a sequence"
+      DTS:DTSID="{9A7E1610-7F8C-4F64-820B-6891545E88F3}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:FailPackageOnFailure="True"
+      DTS:FailParentOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Example for a sequence">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Example for a sequence\Example for a simple sql"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Example for a simple sql"
+          DTS:DTSID="{6DF14B13-DBFF-4FBF-BAF1-0702917E1EEB}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Example for a simple sql"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{A5D46607-B187-4B22-A4E0-5FF755959615}"
+              SQLTask:SqlStatementSource="create table #test ( id int not null )" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Example for a sequence\Example for a sql with result"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Example for a sql with result"
+          DTS:DTSID="{C4C0E1F7-8AAD-450F-9729-1B89B7359AA6}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Example for a sql with result"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{A5D46607-B187-4B22-A4E0-5FF755959615}"
+              SQLTask:SqlStatementSource="Select 1"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::ExampleVar2" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Example for a sequence.PrecedenceConstraints[{4665E8FE-6094-4C11-8153-3B11E95EC543\}]"
+          DTS:CreationName=""
+          DTS:DTSID="{4665E8FE-6094-4C11-8153-3B11E95EC543}"
+          DTS:From="Package\Example for a sequence\Example for a simple sql"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{4665E8FE-6094-4C11-8153-3B11E95EC543}"
+          DTS:To="Package\Example for a sequence\Example for a sql with result" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Example for a sql with parameter"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Example for a sql with parameter"
+      DTS:DTSID="{EA2A648F-72A0-4931-B1AF-ED738825BE26}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Example for a sql with parameter"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A5D46607-B187-4B22-A4E0-5FF755959615}"
+          SQLTask:SqlStatementSource="&#xA;create table #test ( text nvarchar(50) not null )&#xA;insert into #test values( '?' )" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="ExampleVar1"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="130"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{27850120-E3BA-43FF-A06E-639B9BB73EB1\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{27850120-E3BA-43FF-A06E-639B9BB73EB1}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::ExampleVar2] == 1"
+      DTS:From="Package\Example for a sequence"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{27850120-E3BA-43FF-A06E-639B9BB73EB1}"
+      DTS:To="Package\Example for a sql with parameter" />
+  </DTS:PrecedenceConstraints>
+</DTS:Executable>

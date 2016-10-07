@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2A69B28-71B9-4E4A-83D7-B8CA51A52F68}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ALE.SSISComponentWrap</RootNamespace>
+    <AssemblyName>ALE.SSISComponentWrap</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.SQLServer.DTSRuntimeWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ExpressionTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\DTS\Tasks\Microsoft.SqlServer.ExpressionTask.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SQLServer.ManagedDTS, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionManagers\ConnectionManager.cs" />
+    <Compile Include="ConnectionManagers\FlatFileColumn.cs" />
+    <Compile Include="ConnectionManagers\FlatFileConnectionManager.cs" />
+    <Compile Include="ConnectionManagers\OLEDBConnectionManager.cs" />
+    <Compile Include="ControlFlow\Base\EventHandlerWrap.cs" />
+    <Compile Include="ControlFlow\Base\ExecutableBase.cs" />
+    <Compile Include="ControlFlow\Base\IExecutable.cs" />
+    <Compile Include="ControlFlow\Base\ISequence.cs" />
+    <Compile Include="ControlFlow\Base\SequenceBase.cs" />
+    <Compile Include="ControlFlow\Base\TaskBase.cs" />
+    <Compile Include="ControlFlow\DataFlow\DataFlow.cs" />
+    <Compile Include="ControlFlow\DataFlow\DebugComponentEventHandler.cs" />
+    <Compile Include="ControlFlow\ExpressionTask.cs" />
+    <Compile Include="ControlFlow\ForEachLoop.cs" />
+    <Compile Include="ControlFlow\Package.cs" />
+    <Compile Include="ControlFlow\PrecedenceConstraint.cs" />
+    <Compile Include="ControlFlow\Sequence.cs" />
+    <Compile Include="ControlFlow\SQLTask\SQLResultSet.cs" />
+    <Compile Include="ControlFlow\SQLTask\SQLTask.cs" />
+    <Compile Include="ControlFlow\SQLTask\SQLTaskParameter.cs" />
+    <Compile Include="DataFlowComponents\Base\ComponentBase.cs" />
+    <Compile Include="DataFlowComponents\Base\ComponentInfo.cs" />
+    <Compile Include="DataFlowComponents\ConditionalSplit.cs" />
+    <Compile Include="DataFlowComponents\DataType.cs" />
+    <Compile Include="DataFlowComponents\DerivedColumn\DerivedColumn.cs" />
+    <Compile Include="DataFlowComponents\DerivedColumn\DerivedColumnItem.cs" />
+    <Compile Include="DataFlowComponents\FlatFile\FlatFileSource.cs" />
+    <Compile Include="DataFlowComponents\InputColumn.cs" />
+    <Compile Include="DataFlowComponents\Lookup\Lookup.cs" />
+    <Compile Include="DataFlowComponents\Lookup\LookupAdvancedParameters.cs" />
+    <Compile Include="DataFlowComponents\Lookup\LookupColumn.cs" />
+    <Compile Include="DataFlowComponents\Lookup\LookupMapping.cs" />
+    <Compile Include="DataFlowComponents\Multicast.cs" />
+    <Compile Include="DataFlowComponents\OLEDBCommand.cs" />
+    <Compile Include="DataFlowComponents\OLEDB\DataAccessMode.cs" />
+    <Compile Include="DataFlowComponents\OLEDB\OLEDBDestination.cs" />
+    <Compile Include="DataFlowComponents\OLEDB\OLEDBDestinationMapping.cs" />
+    <Compile Include="DataFlowComponents\OLEDB\OLEDBDestinationProperties.cs" />
+    <Compile Include="DataFlowComponents\OLEDB\OLEDBProperties.cs" />
+    <Compile Include="DataFlowComponents\OLEDB\OLEDBSource.cs" />
+    <Compile Include="DataFlowComponents\OLEDB\OLEDBSourceProperties.cs" />
+    <Compile Include="DataFlowComponents\OutputColumn.cs" />
+    <Compile Include="DataFlowComponents\Path\InputWrapper.cs" />
+    <Compile Include="DataFlowComponents\Path\OutputWrapper.cs" />
+    <Compile Include="DataFlowComponents\Path\Path.cs" />
+    <Compile Include="DataFlowComponents\RowCount.cs" />
+    <Compile Include="DataFlowComponents\Union\Union.cs" />
+    <Compile Include="DataFlowComponents\Union\UnionInputColumn.cs" />
+    <Compile Include="Expression.cs" />
+    <Compile Include="HResultHelper.cs" />
+    <Compile Include="ISSISObjectWrap.cs" />
+    <Compile Include="PackageParameter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Variable.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
