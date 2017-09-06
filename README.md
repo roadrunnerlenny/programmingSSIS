@@ -1,4 +1,4 @@
-# programmingSSIS
+# Programming SSIS
 
 A collection of helper class which allow to create SSIS packages programatically. This project demonstrates how SSIS packages can be generated with C# code only. 
 
